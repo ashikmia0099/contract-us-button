@@ -82,4 +82,11 @@ export default Nabbar;
  * 3. handleFormData function work is  when submit form form all data store in setFormData state and           show alart message
  * 
  * 
+ * Run this code on your compiler : 
+ * 
+ * steps:
+ * 1. clone github on your repogotry 
+ * 2. write cmd npm i
+ * 3. run project npm run dev
+ * 
  * **/
