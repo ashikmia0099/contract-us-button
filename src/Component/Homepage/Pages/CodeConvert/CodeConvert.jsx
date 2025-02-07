@@ -24,6 +24,8 @@ import { DiMongodb } from "react-icons/di";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { TbBrandMysql } from "react-icons/tb";
 import { FaAws } from "react-icons/fa";
+import { NeonGradientCard } from "../../../../components/magicui/neon-gradient-card";
+
 
 
 
@@ -79,7 +81,7 @@ const CodeConvert = () => {
 
 
     return (
-        <div className=" mx-auto p-6 bg-gray-900 text-white shadow-lg border-animation">
+        <div className=" mx-auto p-6 text-white shadow-lg border-animation">
             <BlurFade delay={0.25} inView className="mt-5 mb-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl xl:text-4xl/none uppercase  text-center mt-5 mb-2">
                <HyperText  duration={100}> Write Code Make World 👋</HyperText>
@@ -115,7 +117,7 @@ const CodeConvert = () => {
 
             <div >
 
-                <div className='grid grid-cols-2 mt-5 mx-6 border-2 border-gray-400 p-6 py-10 rounded-xl py-10 animated-border'>
+                <div className='grid grid-cols-2 mt-5 mx-6 border-2 border-gray-400 p-6 rounded-xl py-10 animated-border'>
 
                     <div className='mx-1'>
                         <h1 className=' text-xl font-semibold my-3 mx-3'>JavaScript Code</h1>
