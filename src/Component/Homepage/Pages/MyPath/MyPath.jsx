@@ -3,7 +3,7 @@
 import React, { forwardRef, useRef } from "react";
 import { cn } from "@/lib/utils";
 import { AnimatedBeam } from "../../../../components/magicui/animated-beam";
-import MyPathSecond from "./MyPathSecond/MyPathSecond";
+// import MyPathSecond from "./MyPathSecond/MyPathSecond";
 
 const MyPath = () => {
   const Circle = forwardRef(({ className, children }, ref) => {
@@ -492,7 +492,7 @@ const MyPath = () => {
           reverse
         />
       </div>
-      <MyPathSecond></MyPathSecond>
+      {/* <MyPathSecond></MyPathSecond> */}
     </div>
   );
 };

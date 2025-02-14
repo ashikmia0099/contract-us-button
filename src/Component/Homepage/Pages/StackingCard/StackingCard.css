@@ -1,0 +1,13 @@
+.card {
+    position: sticky;
+    top: 50px;
+    transform-origin: top;
+    top: calc(-5vh + 25px);
+}
+
+.w-full{
+    top: 30px;
+}
+
+
+

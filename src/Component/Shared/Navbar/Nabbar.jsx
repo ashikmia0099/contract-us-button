@@ -1,68 +1,87 @@
 import { document } from 'postcss';
 import React, { useState } from 'react';
+import { MdAttachEmail } from 'react-icons/md';
+import { Link, NavLink } from 'react-router-dom';
 
 const Nabbar = () => {
 
-    const [openPopup, setPopup] = useState(false);
-    const [formData, setFormData] = useState({})
 
-    function openPopuphandle() {
-        setPopup(true);
-    }
+    const links = <>
 
 
-    const handleFormData = e => {
-        e.preventDefault();
+        <NavLink to='/' className={({ isActive }) =>
+            isActive ? " border-b-2 border-[#A4DBC1] " : ""
+        }>
+            <li><p className='text-lg font-semibold'>Home</p></li>
+        </NavLink>
 
-        
-        const name = e.target.name.value;
-        const email = e.target.email.value;
-        setFormData({name, email})
-       alert(`Submit form successfully name: ${name},email: ${email} `)
+        <NavLink to='/Project-Showcase' className={({ isActive }) =>
+            isActive ? " border-b border-[#A4DBC1] " : ""
+        }>
+            <li><p className='text-lg font-semibold'>Project Showcase</p></li>
+        </NavLink>
+        {/* <NavLink to='/Blogs' className={({ isActive }) =>
+            isActive ? " border-b border-[#A4DBC1] " : ""
+        }>
+            <li><p className='text-lg font-semibold'>Blogs</p></li>
+        </NavLink> */}
+        <NavLink to='/Details' className={({ isActive }) =>
+            isActive ? " border-b border-[#A4DBC1] " : ""
+        }>
+            <li><p className='text-lg font-semibold'>Details</p></li>
+        </NavLink>
+        <NavLink to='/Deshboard' className={({ isActive }) =>
+            isActive ? " border-b border-[#A4DBC1] " : ""
+        }>
+            <li><p className='text-lg font-semibold'>Deshboard</p></li>
+        </NavLink>
 
-    }
+
+
+
+
+    </>
 
 
 
 
     return (
-        <div>
-            <div className='navbar opacity-100 fixed bg-slate-200'>
-                {/* start  */}
-                <div className=" navbar-start">
-                    <button className='btn'>button</button>
-                </div>
-                {/* center  */}
-                <div className=' navbar-center'>
-                    <ul className=' flex gap-5'>
-                        <li className='btn'>Home </li>
-                        <li onClick={openPopuphandle} className='btn h-6'>Contratc Us</li>
-                        <li className='btn'>About Us</li>
+        <div className="navbar  sticky top-0 z-40  lg:backdrop-blur-xl bg-[#0f141e80] text-white justify-between ">
+            <div className="navbar-start">
+                <div className="dropdown">
+                    <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-5 w-5"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul
+                        tabIndex={0}
+                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                        {links}
                     </ul>
                 </div>
-                {/* end  */}
-                <div className='navbar-end'>
-                    <button className='btn'>Register</button>
+                <div className="avatar">
+                    <div className="w-14 rounded-full ml-10">
+                        <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                    </div>
                 </div>
             </div>
-            {
-                openPopup && (
-                    <div id='popup' className=' absolute py-5 space-y-2 mx-auto bg-gray-600 px-4 pb-2 mt-20 right-72 rounded-xl'>
+            <div className="navbar-end hidden lg:flex pr-10 ">
+                <ul className="menu menu-horizontal px-1">
+                    {links}
+                </ul>
+            </div>
 
-                        <form onSubmit={handleFormData} action="">
-                            <input type='text' name='name' placeholder='Enter Your Name' className='pl-3 py-2 rounded-lg mb-1 w-full text-white'></input>
-                            <input type='email' name='email' placeholder='Email' className='pl-3 py-2 rounded-lg w-full text-white'></input>
 
-                            <div className=' justify-between flex mt-1'>
-                                <div>
-                                    <button className='btn' >Submit</button>
-                                </div>
-                                <div> <button className='btn bg-red-500' onClick={() => setPopup(false)}>Cancel</button></div>
-                            </div>
-                        </form>
-                    </div>
-                )
-            }
         </div>
     );
 };

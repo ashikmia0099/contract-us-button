@@ -2,7 +2,7 @@
 
 
 .cardsecdiv:hover{
-   background-image: linear-gradient(to right, #4ead82d7, #49dd9ab6)
+   background-image: linear-gradient(to right, #2B7753, #49dd9ab6)
 }
 
 
@@ -31,4 +31,14 @@
 
 
 
-/* text section */
+
+
+/* card section */
+.container {
+    overscroll-behavior: none;
+    width: 600%;
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  

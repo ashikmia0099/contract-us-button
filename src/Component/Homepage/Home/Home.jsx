@@ -10,6 +10,7 @@ import {
     TableHeader,
     TableRow,
   } from "@/components/ui/table"
+import Footer from '@/Component/Shared/Footer/Footer';
   
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
         <div>
             <Nabbar></Nabbar>
             <Outlet></Outlet>
+            <Footer></Footer>
         </div>
     );
 };

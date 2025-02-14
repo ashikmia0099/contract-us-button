@@ -63,7 +63,7 @@ const Bannertop = () => {
 
     return (
         <div >
-            <div className=" bg-gradient-to-t to-[#181A1B] from-[#3aa189] pt-36 pb-10 ">
+            <div className=" bg-gradient-to-t to-[#181A1B] from-[#2a6154] pt-56 -mt-20 ">
                 <div className=" text-center grid grid-cols-2 max-w-screen-xl mx-auto">
                     <div className='text-left ml-10 mr-10'>
                         <h1 className='text-7xl font-bold mt-1 uppercase space-y-2 text-white'> <TextAnimate animation="blurInUp" by="character">
